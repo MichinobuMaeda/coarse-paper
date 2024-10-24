@@ -1,0 +1,8 @@
+{
+  "cSpell.words": ["Honkipass", "Maeda", "Michinobu", "tailwindcss"],
+  "eslint.validate": ["javascript", "javascriptreact", "svelte"],
+  "eslint.useFlatConfig": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": false
+}
