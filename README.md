@@ -7,6 +7,7 @@ Some Material Design 3-like components
 Inspired by
 
 -   [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/)
+-   [Material Symbols and Icons](https://fonts.google.com/icons)
 -   [Svelte](https://svelte.dev/)
 -   [Tailwind](https://tailwindcss.com/)
 -   [HyperUI](https://www.hyperui.dev/)
