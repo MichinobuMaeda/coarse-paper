@@ -1,8 +1,6 @@
 # CoarsePaper
 
-Some Material Design 3-like components
-
-![samples](coarse-paper-sample.png)
+Some Material Design 3-like components for Svelte
 
 Inspired by
 
@@ -12,6 +10,8 @@ Inspired by
 -   [Tailwind](https://tailwindcss.com/)
 -   [HyperUI](https://www.hyperui.dev/)
 -   [Mamba UI](https://mambaui.com/)
+
+![samples](coarse-paper-sample.png)
 
 ## Prerequisites
 
