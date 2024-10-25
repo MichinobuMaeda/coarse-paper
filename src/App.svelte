@@ -13,6 +13,7 @@
   import IconButtonOutlined from "./lib/IconButtonOutlined.svelte";
   import CheckBox from "./lib/CheckBox.svelte";
   import Switch from "./lib/Switch.svelte";
+  import Filter from "./lib/Filter.svelte";
   import Radio from "./lib/Radio.svelte";
   import TextFieldFilled from "./lib/TextFieldFilled.svelte";
   import TextFieldOutlined from "./lib/TextFieldOutlined.svelte";
@@ -227,6 +228,20 @@
   <div class="flex p-2 gap-4">
     <Switch id="Switch1" checked={$checked1} ouClick={ouClickSwitch1} />
     <Switch id="Switch2" checked={!$checked1} ouClick={ouClickSwitch2} />
+  </div>
+  <div class="flex p-2 gap-4">
+    <Filter
+      id="Filter1"
+      label="item 1"
+      checked={$checked1}
+      ouClick={ouClickCheckBox1}
+    />
+    <Filter
+      id="Filter1"
+      label="item 2"
+      checked={!$checked1}
+      ouClick={ouClickCheckBox2}
+    />
   </div>
   <div class="grid grid-cols-2 w-full">
     <div class="flex flex-row p-2 gap-4">

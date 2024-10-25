@@ -9,7 +9,7 @@
   type="button"
   class="px-5 py-1.5 border rounded-full h-10
     bg-lightSurface dark:bg-darkSurface
-    text-lightOnSurface dark:text-darkOnSurface
+    text-lightPrimary dark:text-darkPrimary
     border-lightOutline dark:border-darkOutline"
   on:click={ouClick}>{label}</button
 >

@@ -1,4 +1,6 @@
 <script>
+  import SvgCheck from "./SvgCheck.svelte";
+
   export let id;
   export let items;
   export let onClick;
@@ -16,15 +18,21 @@
         onClick(item.value);
       }}
       class={(index == 0
-        ? "pr-4 pl-5 py-1.5 border-t border-b border-l rounded-l-full"
+        ? "pr-4 py-1.5 border-t border-b border-l rounded-l-full"
         : index == items.length - 1
-          ? "pl-4 pr-5 py-1.5 border rounded-r-full"
-          : "px-4 py-1.5 border-t border-b border-l") +
+          ? "pr-4 py-1.5 border rounded-r-full"
+          : "pr-4 py-1.5 border-t border-b border-l") +
         " border-lightOutline dark:border-darkOutline" +
         (item.selected
-          ? " bg-lightSecondaryContainer dark:bg-darkSecondaryContainer text-lightOnSecondaryContainer dark:text-darkOnSecondaryContainer"
-          : " bg-lightSurface dark:bg-darkSurface text-lightOnSurface dark:text-darkOnSurface")}
-      >{item.label}</button
+          ? " pl-2 bg-lightSecondaryContainer dark:bg-darkSecondaryContainer text-lightOnSecondaryContainer dark:text-darkOnSecondaryContainer"
+          : " pl-4 bg-lightSurface dark:bg-darkSurface text-lightOnSurface dark:text-darkOnSurface")}
     >
+      <span class="flex flex-row">
+        {#if item.selected}
+          <SvgCheck />
+        {/if}
+        {item.label}
+      </span>
+    </button>
   {/each}
 </div>
