@@ -2,15 +2,17 @@
   export let id;
   export let svg;
   export let ouClick;
+  export let disabled = false;
 </script>
 
 <button
   {id}
   type="button"
-  class="size-10 p-2 border-none rounded-full
-    bg-lightPrimary dark:bg-darkPrimary
-    text-lightOnPrimary dark:text-darkOnPrimary"
-  on:click={ouClick}
+  class={"size-10 p-2 border-none rounded-full " +
+    (disabled
+      ? "opacity-50 bg-lightSurfaceDim dark:bg-darkSurfaceDim text-lightOnSurface dark:text-darkOnSurface"
+      : "bg-lightPrimary dark:bg-darkPrimary text-lightOnPrimary dark:text-darkOnPrimary")}
+  on:click={disabled ? () => {} : ouClick}
 >
   <svelte:component this={svg} />
 </button>

@@ -8,7 +8,7 @@
 <label
   for={id}
   class="cursor-pointer items-start gap-2
-    text-lightOnBackground dark:text-darkOnBackground"
+      text-lightOnBackground dark:text-darkOnBackground"
 >
   <input
     type="checkbox"

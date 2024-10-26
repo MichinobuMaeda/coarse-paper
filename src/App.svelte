@@ -117,6 +117,38 @@
       [ Clicked: {$whichButtonClicked} ]
     </div>
   </div>
+  <div class="flex flex-row p-2 gap-4">
+    <ButtonElevated
+      id="ButtonElevated"
+      label="Elevated"
+      ouClick={ouClickButtonElevated}
+      disabled
+    />
+    <ButtonFilled
+      id="ButtonFilled"
+      label="Filled"
+      ouClick={ouClickButtonFilled}
+      disabled
+    />
+    <ButtonTonal
+      id="ButtonTonal"
+      label="Tonal"
+      ouClick={ouClickButtonTonal}
+      disabled
+    />
+    <ButtonOutlined
+      id="ButtonOutlined"
+      label="Outlined"
+      ouClick={ouClickButtonOutlined}
+      disabled
+    />
+    <ButtonText
+      id="ButtonText"
+      label="Text"
+      ouClick={ouClickButtonText}
+      disabled
+    />
+  </div>
   <div class="grid grid-cols-2 w-full">
     <div class="flex flex-row p-2 gap-4">
       <IconButton id="IconButton" svg={SvgClose} ouClick={ouClickIconButton} />
@@ -141,6 +173,32 @@
     >
       [ Clicked: {$whichIconButtonClicked} ]
     </div>
+  </div>
+  <div class="flex flex-row p-2 gap-4">
+    <IconButton
+      id="IconButton"
+      svg={SvgClose}
+      ouClick={ouClickIconButton}
+      disabled
+    />
+    <IconButtonFilled
+      id="IconButtonFilled"
+      svg={SvgCancel}
+      ouClick={ouClickIconButtonFilled}
+      disabled
+    />
+    <IconButtonTonal
+      id="IconButtonTonal"
+      svg={SvgRefresh}
+      ouClick={ouClickIconButtonTonal}
+      disabled
+    />
+    <IconButtonOutlined
+      id="IconButtonOutlined"
+      svg={SvgContentCopy}
+      ouClick={ouClickIconButtonOutlined}
+      disabled
+    />
   </div>
   <div class="grid grid-cols-2 w-full">
     <div class="flex flex-row p-2 gap-4">
@@ -242,6 +300,20 @@
       checked={!$checked1}
       ouClick={ouClickCheckBox2}
     />
+    <Filter
+      id="Filter1"
+      label="item 1"
+      checked={$checked1}
+      ouClick={ouClickCheckBox1}
+      disabled
+    />
+    <Filter
+      id="Filter1"
+      label="item 2"
+      checked={!$checked1}
+      ouClick={ouClickCheckBox2}
+      disabled
+    />
   </div>
   <div class="grid grid-cols-2 w-full">
     <div class="flex flex-row p-2 gap-4">
@@ -268,6 +340,26 @@
       [ {$textFilled1} ] [ {$textFilled2} ]
     </div>
   </div>
+  <div class="flex flex-row p-2 gap-4">
+    <TextFieldFilled
+      id="TextFieldFilled1"
+      value={$textFilled1}
+      label="Full name"
+      message="Required"
+      error="Required"
+      ouInput={ouInputTextFilled1}
+      disabled
+    />
+    <TextFieldFilled
+      id="TextFieldFilled2"
+      type="email"
+      value={$textFilled2}
+      label="E-mail"
+      message="Optional"
+      ouInput={ouInputTextFilled2}
+      disabled
+    />
+  </div>
   <div class="grid grid-cols-2 w-full">
     <div class="flex flex-row p-2 gap-4">
       <TextFieldOutlined
@@ -292,6 +384,26 @@
     >
       [ {$textOutlined1} ] [ {$textOutlined2} ]
     </div>
+  </div>
+  <div class="flex flex-row p-2 gap-4">
+    <TextFieldOutlined
+      id="TextFieldOutlined1"
+      label="Full name"
+      value={$textOutlined1}
+      message="Required"
+      error="Required"
+      ouInput={ouInputTextOutlined1}
+      disabled
+    />
+    <TextFieldOutlined
+      id="TextFieldOutlined2"
+      type="email"
+      value={$textOutlined2}
+      label="E-mail"
+      message="Optional"
+      ouInput={ouInputTextOutlined2}
+      disabled
+    />
   </div>
 </main>
 

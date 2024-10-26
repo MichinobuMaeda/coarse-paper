@@ -6,6 +6,7 @@
   export let message = "";
   export let error = "";
   export let ouInput;
+  export let disabled = false;
 
   const inputEventHandler = (e) => {
     const target = e.target;
@@ -13,7 +14,7 @@
   };
 </script>
 
-<div class="flex flex-col w-auto">
+<div class={"flex flex-col w-auto" + (disabled ? " opacity-40" : "")}>
   <label
     for={id}
     class="pt-4 pb-2 px-2 relative block rounded-t-md border-b
@@ -31,6 +32,7 @@
         placeholder-lightSurfaceContainer dark:placeholder-darkSurfaceContainer"
       placeholder={label}
       on:input={inputEventHandler}
+      {disabled}
     />
     <span
       class="peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs
