@@ -10,7 +10,7 @@
 <button
   {id}
   type="button"
-  class={"pr-4 py-0.5 rounded-md " +
+  class={"pr-4 py-0.5 rounded-lg h-8 " +
     (checked
       ? "pl-1 border-none bg-lightPrimaryContainer dark:bg-darkPrimaryContainer text-lightOnPrimaryContainer dark:text-darkOnPrimaryContainer"
       : "pl-4 border bg-lightSurface dark:bg-darkSurface text-lightOnSurface dark:text-darkOnSurface border-lightOutlineVariant dark:border-darkOutlineVariant")}
