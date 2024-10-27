@@ -8,7 +8,7 @@
 <button
   {id}
   type="button"
-  class={"px-1 " +
+  class={"px-1 text-base " +
     (disabled
       ? "opacity-50 text-lightOnSurface dark:text-darkOnSurface"
       : "text-lightPrimary dark:text-darkPrimary")}

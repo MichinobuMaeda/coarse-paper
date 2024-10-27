@@ -9,8 +9,8 @@
   {id}
   type="button"
   class={disabled
-    ? "opacity-50 text-lightOnSurface dark:text-darkOnSurface"
-    : "text-lightPrimary dark:text-darkPrimary"}
+    ? " text-base opacity-50 text-lightOnSurface dark:text-darkOnSurface"
+    : " text-base text-lightPrimary dark:text-darkPrimary"}
   on:click={disabled ? () => {} : ouClick}
 >
   <svelte:component this={svg} />

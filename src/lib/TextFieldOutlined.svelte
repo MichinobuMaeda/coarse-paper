@@ -6,6 +6,7 @@
   export let message = "";
   export let error = "";
   export let ouInput;
+  export let readonly = false;
   export let disabled = false;
 
   const inputEventHandler = (e) => {
@@ -26,12 +27,13 @@
       {id}
       {type}
       {value}
-      class="peer border-none focus:border-none focus:outline-none focus:ring-0 w-full
+      class="peer border-none focus:border-none focus:outline-none focus:ring-0 w-full text-base
         bg-lightSurface dark:bg-darkSurface
         text-lightOnSurface dark:text-darkOnSurface
         placeholder-lightSurface dark:placeholder-darkSurface"
       placeholder={label}
       on:input={inputEventHandler}
+      {readonly}
       {disabled}
     />
     <span

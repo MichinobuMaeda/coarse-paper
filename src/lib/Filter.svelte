@@ -11,7 +11,7 @@
 <button
   {id}
   type="button"
-  class={"pr-4 py-0.5 rounded-lg h-8 " +
+  class={"pr-4 py-0.5 rounded-lg h-8 text-base " +
     (disabled
       ? checked
         ? "opacity-50 pl-1 border-none bg-lightSurfaceDim dark:bg-darkSurfaceDim text-lightOnSurface dark:text-darkOnSurface"

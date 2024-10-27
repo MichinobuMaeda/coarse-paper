@@ -7,7 +7,7 @@
 
 <label
   for={id}
-  class="cursor-pointer items-start gap-2
+  class="cursor-pointer items-start gap-2 text-base
       text-lightOnBackground dark:text-darkOnBackground"
 >
   <input

@@ -8,7 +8,7 @@
 <button
   {id}
   type="button"
-  class={"size-10 p-2 border-none rounded-full " +
+  class={"size-10 p-2 border-none rounded-full text-base " +
     (disabled
       ? "opacity-50 bg-lightSurfaceDim dark:bg-darkSurfaceDim text-lightOnSurface dark:text-darkOnSurface"
       : "bg-lightPrimary dark:bg-darkPrimary text-lightOnPrimary dark:text-darkOnPrimary")}

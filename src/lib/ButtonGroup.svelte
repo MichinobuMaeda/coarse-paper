@@ -6,7 +6,7 @@
   export let onClick;
 </script>
 
-<div {id} role="group" class="inline-flex rounded-md shadow-sm h-10">
+<div {id} role="group" class="inline-flex rounded-md shadow-sm h-10 text-base">
   {#each items as item, index}
     <button
       type="button"
