@@ -8,6 +8,7 @@
   export let ouInput;
   export let readonly = false;
   export let disabled = false;
+  export let monospace = false;
 
   const inputEventHandler = (e) => {
     const target = e.target;
@@ -27,10 +28,11 @@
       {id}
       {type}
       {value}
-      class="peer border-none focus:border-none focus:outline-none focus:ring-0 w-full text-base
-        bg-lightSurfaceContainer dark:bg-darkSurfaceContainer
-        text-lightOnSurface dark:text-darkOnSurface
-        placeholder-lightSurfaceContainer dark:placeholder-darkSurfaceContainer"
+      class={"peer border-none focus:border-none focus:outline-none focus:ring-0 w-full text-base" +
+        " bg-lightSurfaceContainer dark:bg-darkSurfaceContainer" +
+        " text-lightOnSurface dark:text-darkOnSurface" +
+        " placeholder-lightSurfaceContainer dark:placeholder-darkSurfaceContainer" +
+        (monospace ? " font-mono" : "")}
       placeholder={label}
       on:input={inputEventHandler}
       {readonly}
