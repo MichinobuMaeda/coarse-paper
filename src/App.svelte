@@ -86,7 +86,7 @@
 </script>
 
 <Header />
-<main>
+<main class="py-2">
   <div class="grid grid-cols-2 w-full">
     <div class="flex flex-row p-2 gap-4">
       <ButtonElevated
