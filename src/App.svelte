@@ -25,31 +25,31 @@
 
   let whichButtonClicked = writable("");
 
-  const ouClickButtonElevated = () => whichButtonClicked.set("Elevated");
-  const ouClickButtonFilled = () => whichButtonClicked.set("Filled");
-  const ouClickButtonTonal = () => whichButtonClicked.set("Tonal");
-  const ouClickButtonOutlined = () => whichButtonClicked.set("Outlined");
-  const ouClickButtonText = () => whichButtonClicked.set("Text");
+  const onClickButtonElevated = () => whichButtonClicked.set("Elevated");
+  const onClickButtonFilled = () => whichButtonClicked.set("Filled");
+  const onClickButtonTonal = () => whichButtonClicked.set("Tonal");
+  const onClickButtonOutlined = () => whichButtonClicked.set("Outlined");
+  const onClickButtonText = () => whichButtonClicked.set("Text");
 
   let whichIconButtonClicked = writable("");
 
-  const ouClickIconButton = () => whichIconButtonClicked.set("Normal");
-  const ouClickIconButtonFilled = () => whichIconButtonClicked.set("Filled");
-  const ouClickIconButtonTonal = () => whichIconButtonClicked.set("Tonal");
-  const ouClickIconButtonOutlined = () =>
+  const onClickIconButton = () => whichIconButtonClicked.set("Normal");
+  const onClickIconButtonFilled = () => whichIconButtonClicked.set("Filled");
+  const onClickIconButtonTonal = () => whichIconButtonClicked.set("Tonal");
+  const onClickIconButtonOutlined = () =>
     whichIconButtonClicked.set("Outlined");
 
   let buttonGroupSelected = writable("1");
 
   /** @param {string} value @return void */
-  const ouClickButtonGroup = (value) => buttonGroupSelected.set(value);
+  const onClickButtonGroup = (value) => buttonGroupSelected.set(value);
   /** @param {string} value @return void */
   const ouEditButtonGroupSelected = (value) => buttonGroupSelected.set(value);
 
   let radioSelected = writable("2");
 
   /** @param {string} value @return void */
-  const ouClickRadio = (value) => radioSelected.set(value);
+  const onClickRadio = (value) => radioSelected.set(value);
   /** @param {string} value @return void */
   const ouEditRadioSelected = (value) => radioSelected.set(value);
 
@@ -57,17 +57,17 @@
   // let checked2 = writable(true);
 
   /** @param {boolean} checked @return void */
-  const ouClickCheckBox1 = (checked) => checked1.set(checked);
+  const onClickCheckBox1 = (checked) => checked1.set(checked);
   /** @param {boolean} checked @return void */
-  const ouClickCheckBox2 = (checked) => checked1.set(!checked);
+  const onClickCheckBox2 = (checked) => checked1.set(!checked);
 
   // let switch1 = writable(false);
   // let switch2 = writable(true);
 
   /** @param {boolean} enabled @return void */
-  const ouClickSwitch1 = (enabled) => checked1.set(enabled);
+  const onClickSwitch1 = (enabled) => checked1.set(enabled);
   /** @param {boolean} enabled @return void */
-  const ouClickSwitch2 = (enabled) => checked1.set(!enabled);
+  const onClickSwitch2 = (enabled) => checked1.set(!enabled);
 
   let textFilled1 = writable("");
   let textFilled2 = writable("user@example.com");
@@ -92,29 +92,29 @@
       <ButtonElevated
         id="ButtonElevated"
         label="Elevated"
-        ouClick={ouClickButtonElevated}
+        onClick={onClickButtonElevated}
       />
       <ButtonFilled
         id="ButtonFilled"
         label="Filled"
-        ouClick={ouClickButtonFilled}
+        onClick={onClickButtonFilled}
       />
       <ButtonTonal
         id="ButtonTonal"
         label="Tonal"
-        ouClick={ouClickButtonTonal}
+        onClick={onClickButtonTonal}
       />
       <ButtonOutlined
         id="ButtonOutlined"
         icon={SvgContentCopy}
         label="Outlined"
-        ouClick={ouClickButtonOutlined}
+        onClick={onClickButtonOutlined}
       />
       <ButtonText
         id="ButtonText"
         icon={SvgContentCopy}
         label="Text"
-        ouClick={ouClickButtonText}
+        onClick={onClickButtonText}
       />
     </div>
     <div
@@ -127,53 +127,53 @@
     <ButtonElevated
       id="ButtonElevated"
       label="Elevated"
-      ouClick={ouClickButtonElevated}
+      onClick={onClickButtonElevated}
       disabled
     />
     <ButtonFilled
       id="ButtonFilled"
       label="Filled"
-      ouClick={ouClickButtonFilled}
+      onClick={onClickButtonFilled}
       disabled
     />
     <ButtonTonal
       id="ButtonTonal"
       label="Tonal"
-      ouClick={ouClickButtonTonal}
+      onClick={onClickButtonTonal}
       disabled
     />
     <ButtonOutlined
       id="ButtonOutlined"
       icon={SvgContentCopy}
       label="Outlined"
-      ouClick={ouClickButtonOutlined}
+      onClick={onClickButtonOutlined}
       disabled
     />
     <ButtonText
       id="ButtonText"
       icon={SvgContentCopy}
       label="Text"
-      ouClick={ouClickButtonText}
+      onClick={onClickButtonText}
       disabled
     />
   </div>
   <div class="grid grid-cols-2 w-full">
     <div class="flex flex-row p-2 gap-4">
-      <IconButton id="IconButton" icon={SvgClose} ouClick={ouClickIconButton} />
+      <IconButton id="IconButton" icon={SvgClose} onClick={onClickIconButton} />
       <IconButtonFilled
         id="IconButtonFilled"
         icon={SvgCancel}
-        ouClick={ouClickIconButtonFilled}
+        onClick={onClickIconButtonFilled}
       />
       <IconButtonTonal
         id="IconButtonTonal"
         icon={SvgRefresh}
-        ouClick={ouClickIconButtonTonal}
+        onClick={onClickIconButtonTonal}
       />
       <IconButtonOutlined
         id="IconButtonOutlined"
         icon={SvgContentCopy}
-        ouClick={ouClickIconButtonOutlined}
+        onClick={onClickIconButtonOutlined}
       />
     </div>
     <div
@@ -186,25 +186,25 @@
     <IconButton
       id="IconButton"
       icon={SvgClose}
-      ouClick={ouClickIconButton}
+      onClick={onClickIconButton}
       disabled
     />
     <IconButtonFilled
       id="IconButtonFilled"
       icon={SvgCancel}
-      ouClick={ouClickIconButtonFilled}
+      onClick={onClickIconButtonFilled}
       disabled
     />
     <IconButtonTonal
       id="IconButtonTonal"
       icon={SvgRefresh}
-      ouClick={ouClickIconButtonTonal}
+      onClick={onClickIconButtonTonal}
       disabled
     />
     <IconButtonOutlined
       id="IconButtonOutlined"
       icon={SvgContentCopy}
-      ouClick={ouClickIconButtonOutlined}
+      onClick={onClickIconButtonOutlined}
       disabled
     />
   </div>
@@ -229,7 +229,7 @@
             selected: $buttonGroupSelected == "3",
           },
         ]}
-        onClick={ouClickButtonGroup}
+        onClick={onClickButtonGroup}
       />
     </div>
     <div class="flex flex-row p-2 gap-4">
@@ -252,7 +252,7 @@
         name="RadioName"
         value="1"
         label="item 1"
-        ouClick={ouClickRadio}
+        onClick={onClickRadio}
         checked={$radioSelected === "1"}
       />
       <Radio
@@ -260,7 +260,7 @@
         name="RadioName"
         value="2"
         label="item 2"
-        ouClick={ouClickRadio}
+        onClick={onClickRadio}
         checked={$radioSelected === "2"}
       />
     </div>
@@ -282,44 +282,44 @@
       id="CheckBox1"
       label="item 1"
       checked={$checked1}
-      ouClick={ouClickCheckBox1}
+      onClick={onClickCheckBox1}
     />
     <CheckBox
       id="CheckBox2"
       label="item 2"
       checked={!$checked1}
-      ouClick={ouClickCheckBox2}
+      onClick={onClickCheckBox2}
     />
   </div>
   <div class="flex p-2 gap-4">
-    <Switch id="Switch1" checked={$checked1} ouClick={ouClickSwitch1} />
-    <Switch id="Switch2" checked={!$checked1} ouClick={ouClickSwitch2} />
+    <Switch id="Switch1" checked={$checked1} onClick={onClickSwitch1} />
+    <Switch id="Switch2" checked={!$checked1} onClick={onClickSwitch2} />
   </div>
   <div class="flex p-2 gap-4">
     <Filter
       id="Filter1"
       label="item 1"
       checked={$checked1}
-      ouClick={ouClickCheckBox1}
+      onClick={onClickCheckBox1}
     />
     <Filter
       id="Filter1"
       label="item 2"
       checked={!$checked1}
-      ouClick={ouClickCheckBox2}
+      onClick={onClickCheckBox2}
     />
     <Filter
       id="Filter1"
       label="item 1"
       checked={$checked1}
-      ouClick={ouClickCheckBox1}
+      onClick={onClickCheckBox1}
       disabled
     />
     <Filter
       id="Filter1"
       label="item 2"
       checked={!$checked1}
-      ouClick={ouClickCheckBox2}
+      onClick={onClickCheckBox2}
       disabled
     />
   </div>

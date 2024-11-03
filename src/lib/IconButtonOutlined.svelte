@@ -1,8 +1,16 @@
 <script>
-  export let id;
-  export let icon;
-  export let ouClick;
-  export let disabled = false;
+  /**
+   * @typedef {Object} Props
+   * @property {string} id
+   * @property {any} icon
+   * @property {function} onClick
+   * @property {boolean} [disabled]
+   */
+
+  /** @type {Props} */
+  let { id, icon, onClick, disabled = false } = $props();
+
+  const SvelteComponent = $derived(icon);
 </script>
 
 <button
@@ -10,7 +18,7 @@
   type="button"
   class={"size-10 p-2 border rounded-full text-base bg-lightSurface dark:bg-darkSurface border-lightOutline dark:border-darkOutline text-lightOnSurface dark:text-darkOnSurface" +
     (disabled ? " opacity-30" : "")}
-  on:click={disabled ? () => {} : ouClick}
+  onclick={disabled ? () => {} : () => onClick()}
 >
-  <svelte:component this={icon} />
+  <SvelteComponent />
 </button>

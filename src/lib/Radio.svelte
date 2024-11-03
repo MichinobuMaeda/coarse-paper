@@ -1,10 +1,16 @@
 <script>
-  export let id;
-  export let name;
-  export let value;
-  export let label;
-  export let checked = false;
-  export let ouClick;
+  /**
+   * @typedef {Object} Props
+   * @property {string} id
+   * @property {any} name
+   * @property {any} value
+   * @property {string} label
+   * @property {boolean} [checked]
+   * @property {function} onClick
+   */
+
+  /** @type {Props} */
+  let { id, name, value, label, checked = false, onClick } = $props();
 </script>
 
 <label
@@ -18,7 +24,7 @@
     {name}
     {value}
     {checked}
-    on:click={() => ouClick(value)}
+    onclick={() => onClick(value)}
     class="size-5 rounded align-text-bottom mr-0.5
       border-lightOutline dark:border-darkOutline
       accent-lightPrimary dark:accent-darkPrimary"
