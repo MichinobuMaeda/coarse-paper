@@ -106,10 +106,16 @@
       />
       <ButtonOutlined
         id="ButtonOutlined"
+        icon={SvgContentCopy}
         label="Outlined"
         ouClick={ouClickButtonOutlined}
       />
-      <ButtonText id="ButtonText" label="Text" ouClick={ouClickButtonText} />
+      <ButtonText
+        id="ButtonText"
+        icon={SvgContentCopy}
+        label="Text"
+        ouClick={ouClickButtonText}
+      />
     </div>
     <div
       class="flex flex-row p-2 gap-4 text-lightTertiary dark:text-darkTertiary"
@@ -138,12 +144,14 @@
     />
     <ButtonOutlined
       id="ButtonOutlined"
+      icon={SvgContentCopy}
       label="Outlined"
       ouClick={ouClickButtonOutlined}
       disabled
     />
     <ButtonText
       id="ButtonText"
+      icon={SvgContentCopy}
       label="Text"
       ouClick={ouClickButtonText}
       disabled
@@ -151,20 +159,20 @@
   </div>
   <div class="grid grid-cols-2 w-full">
     <div class="flex flex-row p-2 gap-4">
-      <IconButton id="IconButton" svg={SvgClose} ouClick={ouClickIconButton} />
+      <IconButton id="IconButton" icon={SvgClose} ouClick={ouClickIconButton} />
       <IconButtonFilled
         id="IconButtonFilled"
-        svg={SvgCancel}
+        icon={SvgCancel}
         ouClick={ouClickIconButtonFilled}
       />
       <IconButtonTonal
         id="IconButtonTonal"
-        svg={SvgRefresh}
+        icon={SvgRefresh}
         ouClick={ouClickIconButtonTonal}
       />
       <IconButtonOutlined
         id="IconButtonOutlined"
-        svg={SvgContentCopy}
+        icon={SvgContentCopy}
         ouClick={ouClickIconButtonOutlined}
       />
     </div>
@@ -177,25 +185,25 @@
   <div class="flex flex-row p-2 gap-4">
     <IconButton
       id="IconButton"
-      svg={SvgClose}
+      icon={SvgClose}
       ouClick={ouClickIconButton}
       disabled
     />
     <IconButtonFilled
       id="IconButtonFilled"
-      svg={SvgCancel}
+      icon={SvgCancel}
       ouClick={ouClickIconButtonFilled}
       disabled
     />
     <IconButtonTonal
       id="IconButtonTonal"
-      svg={SvgRefresh}
+      icon={SvgRefresh}
       ouClick={ouClickIconButtonTonal}
       disabled
     />
     <IconButtonOutlined
       id="IconButtonOutlined"
-      svg={SvgContentCopy}
+      icon={SvgContentCopy}
       ouClick={ouClickIconButtonOutlined}
       disabled
     />

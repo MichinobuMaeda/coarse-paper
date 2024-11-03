@@ -21,7 +21,7 @@
         : "pl-4 border bg-lightSurface dark:bg-darkSurface text-lightOnSurface dark:text-darkOnSurface border-lightOutlineVariant dark:border-darkOutlineVariant")}
   on:click={disabled ? () => {} : () => ouClick(!checked)}
 >
-  <span class="flex flex-row">
+  <span class="flex flex-row gap-0.5">
     {#if checked}
       <SvgCheck />
     {/if}
