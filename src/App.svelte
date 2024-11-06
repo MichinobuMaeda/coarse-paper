@@ -76,7 +76,7 @@
 </script>
 
 <div
-  class="min-h-screen justify-between max-w-4xl
+  class="min-h-screen justify-between max-w-5xl
     bg-lightBackground dark:bg-darkBackground
     text-lightOnBackground dark:text-darkOnBackground"
 >
