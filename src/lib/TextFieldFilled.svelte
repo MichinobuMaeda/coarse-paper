@@ -3,11 +3,10 @@
    * @typedef {Object} Props
    * @property {string} id
    * @property {string} [type]
-   * @property {string} [value]
+   * @property {Object} value
    * @property {string} label
    * @property {string} [message]
    * @property {string} [error]
-   * @property {function} ouInput
    * @property {boolean} [readonly]
    * @property {boolean} [disabled]
    * @property {boolean} [monospace]
@@ -17,23 +16,17 @@
   let {
     id,
     type = "text",
-    value = "",
+    value = $bindable(),
     label,
     message = "",
     error = "",
-    ouInput,
     readonly = false,
     disabled = false,
     monospace = false,
   } = $props();
-
-  const inputEventHandler = (e) => {
-    const target = e.target;
-    ouInput(target.value);
-  };
 </script>
 
-<div class={"flex flex-col w-auto" + (disabled ? " opacity-40" : "")}>
+<div class={"flex flex-col grow" + (disabled ? " opacity-40" : "")}>
   <label
     for={id}
     class="pt-4 pb-2 px-2 relative block rounded-t-md border-b
@@ -44,14 +37,13 @@
     <input
       {id}
       {type}
-      {value}
+      bind:value
       class={"peer border-none focus:border-none focus:outline-none focus:ring-0 w-full text-base" +
         " bg-lightSurfaceContainer dark:bg-darkSurfaceContainer" +
         " text-lightOnSurface dark:text-darkOnSurface" +
         " placeholder-lightSurfaceContainer dark:placeholder-darkSurfaceContainer" +
         (monospace ? " font-mono" : "")}
       placeholder={label}
-      oninput={inputEventHandler}
       {readonly}
       {disabled}
     />

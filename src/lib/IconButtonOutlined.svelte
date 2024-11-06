@@ -16,7 +16,7 @@
 <button
   {id}
   type="button"
-  class={"size-10 p-2 border rounded-full text-base bg-lightSurface dark:bg-darkSurface border-lightOutline dark:border-darkOutline text-lightOnSurface dark:text-darkOnSurface" +
+  class={"size-10 px-2 py-1 border rounded-full text-base bg-lightSurface dark:bg-darkSurface border-lightOutline dark:border-darkOutline text-lightOnSurface dark:text-darkOnSurface" +
     (disabled ? " opacity-30" : "")}
   onclick={disabled ? () => {} : () => onClick()}
 >

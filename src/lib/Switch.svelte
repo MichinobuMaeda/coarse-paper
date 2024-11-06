@@ -4,12 +4,11 @@
   /**
    * @typedef {Object} Props
    * @property {string} id
-   * @property {boolean} [checked]
-   * @property {function} onClick
+   * @property {Object} checked
    */
 
   /** @type {Props} */
-  let { id, checked = false, onClick } = $props();
+  let { id, checked = $bindable() } = $props();
 </script>
 
 <label
@@ -24,11 +23,10 @@
   <input
     type="checkbox"
     {id}
-    {checked}
-    onclick={() => onClick(!checked)}
+    bind:checked
     class="peer sr-only
-      [&:checked_+_span_svg[data-checked-icon]]:block
-      [&:checked_+_span_svg[data-unchecked-icon]]:hidden"
+      [&:$checked_+_span_svg[data-checked-icon]]:block
+      [&:$checked_+_span_svg[data-unchecked-icon]]:hidden"
   />
 
   <span

@@ -3,12 +3,11 @@
    * @typedef {Object} Props
    * @property {string} id
    * @property {string} label
-   * @property {boolean} [checked]
-   * @property {function} onClick
+   * @property {Object} checked
    */
 
   /** @type {Props} */
-  let { id, label, checked = false, onClick } = $props();
+  let { id, label, checked = $bindable() } = $props();
 </script>
 
 <label
@@ -19,8 +18,7 @@
   <input
     type="checkbox"
     {id}
-    {checked}
-    onclick={() => onClick(!checked)}
+    bind:checked
     class="size-5 rounded align-text-bottom mr-0.5
       border-lightOutline dark:border-darkOutline
       accent-lightPrimary dark:accent-darkPrimary"
