@@ -20,7 +20,7 @@
         value = item.value;
       }}
       class={(index == 0
-        ? "pr-4 py-1.5 border-t border-b border-l rounded-l-full"
+        ? "pr-4 py-1.5 border-t border-b border-l rounded-l-full "
         : index == items.length - 1
           ? "pr-4 py-1.5 border rounded-r-full "
           : "pr-4 py-1.5 border-t border-b border-l ") +
