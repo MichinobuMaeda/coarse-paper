@@ -80,15 +80,15 @@
     bg-lightSurfaceVariant dark:bg-darkSurfaceVariant"
 >
   <div
-    class="min-h-screen justify-between max-w-5xl
+    class="min-h-screen w-full lg:w-[1048px]
     bg-lightBackground dark:bg-darkBackground
     text-lightOnBackground dark:text-darkOnBackground"
   >
     <Header />
-    <main class="flex flex-col p-4 gap-4 mb-auto">
-      <div class="grid grid-flow grid-cols-3 gap-4">
-        <div class="grid grid-rows-2 col-span-3 lg:col-span-2 gap-4">
-          <div class="flex flex-wrap gap-4">
+    <main class="flex flex-col m-[12px] mb-auto">
+      <div class="flex flex-row flex-wrap">
+        <div class="flex flex-col w-[640px]">
+          <div class="flex flex-wrap p-2 gap-4">
             <ButtonElevated
               id="ButtonElevated"
               label="Elevated"
@@ -117,7 +117,7 @@
               onClick={onClickButtonText}
             />
           </div>
-          <div class="flex flex-wrap gap-4">
+          <div class="flex flex-wrap p-2 gap-4">
             <ButtonElevated
               id="ButtonElevated"
               label="Elevated"
@@ -152,11 +152,13 @@
             />
           </div>
         </div>
-        <div class="col-span-3 lg:col-span-1 flex gap-4">
+        <div class="flex flex-wrap p-2 gap-4 w-[320px]">
           [ Clicked: {$whichButtonClicked} ]
         </div>
-        <div class="grid sm:grid-cols-2 col-span-3 lg:col-span-2 gap-4">
-          <div class="flex flex-wrap gap-4">
+      </div>
+      <div class="flex flex-row flex-wrap">
+        <div class="flex flex-wrap w-[640px]">
+          <div class="flex flex-wrap p-2 gap-4">
             <IconButton
               id="IconButton"
               icon={SvgClose}
@@ -178,7 +180,7 @@
               onClick={onClickIconButtonOutlined}
             />
           </div>
-          <div class="flex flex-wrap gap-4">
+          <div class="flex flex-wrap p-2 gap-4">
             <IconButton
               id="IconButton"
               icon={SvgClose}
@@ -205,18 +207,20 @@
             />
           </div>
         </div>
-        <div class="col-span-3 lg:col-span-1 flex gap-4">
+        <div class="flex flex-wrap p-2 gap-4 w-[320px]">
           [ Clicked: {$whichIconButtonClicked} ]
         </div>
-        <div class="grid sm:grid-cols-2 col-span-3 lg:col-span-2 gap-4">
-          <div class="flex flex-wrap gap-4">
+      </div>
+      <div class="flex flex-row flex-wrap">
+        <div class="flex flex-wrap w-[640px]">
+          <div class="flex flex-wrap p-2 gap-4">
             <GroupedButton
               id="ButtonGroup1"
               items={groupItems}
               bind:value={groupSelected}
             />
           </div>
-          <div class="flex flex-wrap gap-4">
+          <div class="flex flex-wrap p-2 gap-4">
             <GroupedRadio
               id="RadioGroup1"
               items={groupItems}
@@ -224,9 +228,11 @@
             />
           </div>
         </div>
-        <div class="col-span-3 lg:col-span-1 flex gap-4"></div>
-        <div class="grid col-span-3 lg:col-span-2 gap-4">
-          <div class="flex flex-wrap gap-4">
+        <div class="flex flex-wrap p-2 gap-4 w-[320px]"></div>
+      </div>
+      <div class="flex flex-row flex-wrap">
+        <div class="flex flex-wrap w-[640px]">
+          <div class="flex flex-wrap p-2 gap-4">
             <GroupedCheckBox
               id="GroupedCheckBox1"
               items={groupItems}
@@ -234,26 +240,30 @@
             />
           </div>
         </div>
-        <div class="col-span-3 lg:col-span-1 flex gap-4">
+        <div class="flex flex-wrap p-2 gap-4 w-[320px]">
           [ Selected: {JSON.stringify(groupMultiSelected)} ]
         </div>
-        <div class="grid sm:grid-cols-2 col-span-3 lg:col-span-2 gap-4">
-          <div class="flex flex-wrap gap-4">
+      </div>
+      <div class="flex flex-row flex-wrap">
+        <div class="flex flex-wrap w-[640px]">
+          <div class="flex flex-wrap p-2 gap-4">
             <Switch id="Switch1" bind:checked={checked1} />
             <Switch id="Switch2" bind:checked={checked2} />
           </div>
-          <div class="flex flex-wrap gap-4">
+          <div class="flex flex-wrap p-2 gap-4">
             <CheckBox id="CheckBox1" label="item 1" bind:checked={checked1} />
             <CheckBox id="CheckBox2" label="item 2" bind:checked={checked2} />
           </div>
         </div>
-        <div class="col-span-3 lg:col-span-1 flex gap-4"></div>
-        <div class="grid sm:grid-cols-2 col-span-3 lg:col-span-2 gap-4">
-          <div class="flex flex-wrap gap-4">
+        <div class="flex flex-wrap p-2 gap-4 w-[320px]"></div>
+      </div>
+      <div class="flex flex-row flex-wrap">
+        <div class="flex flex-wrap w-[640px]">
+          <div class="flex flex-wrap p-2 gap-4">
             <Filter id="Filter1" label="item 1" bind:checked={checked1} />
             <Filter id="Filter1" label="item 2" bind:checked={checked2} />
           </div>
-          <div class="flex flex-wrap gap-4">
+          <div class="flex flex-wrap p-2 gap-4">
             <Filter
               id="Filter1"
               label="item 1"
@@ -268,11 +278,11 @@
             />
           </div>
         </div>
-        <div class="col-span-3 lg:col-span-1 flex gap-4"></div>
-        <div
-          class="grid grid-rows-4 sm:grid-rows-2 sm:grid-cols-2 col-span-3 lg:col-span-2 gap-4"
-        >
-          <div class="flex flex-wrap gap-4">
+        <div class="flex flex-wrap p-2 gap-4 w-[320px]"></div>
+      </div>
+      <div class="flex flex-row flex-wrap">
+        <div class="flex flex-col flex-wrap w-[640px]">
+          <div class="flex flex-wrap p-2 gap-4">
             <TextFieldFilled
               id="TextFieldFilled1"
               bind:value={textFilled1}
@@ -280,8 +290,6 @@
               message="Required"
               error={textFilled1 ? "" : "Required"}
             />
-          </div>
-          <div class="flex flex-wrap gap-4">
             <TextFieldFilled
               id="TextFieldFilled2"
               type="email"
@@ -290,7 +298,7 @@
               message="Optional"
             />
           </div>
-          <div class="flex flex-wrap gap-4">
+          <div class="flex flex-wrap p-2 gap-4">
             <TextFieldFilled
               id="TextFieldFilled1"
               bind:value={textFilled1}
@@ -299,8 +307,6 @@
               error={textFilled1 ? "" : "Required"}
               disabled
             />
-          </div>
-          <div class="flex flex-wrap gap-4">
             <TextFieldFilled
               id="TextFieldFilled2"
               type="email"
@@ -311,11 +317,11 @@
             />
           </div>
         </div>
-        <div class="col-span-3 lg:col-span-1 flex gap-4"></div>
-        <div
-          class="grid grid-rows-4 sm:grid-rows-2 sm:grid-cols-2 col-span-3 lg:col-span-2 gap-4"
-        >
-          <div class="flex flex-wrap gap-4">
+        <div class="flex flex-wrap p-2 gap-4 w-[320px]"></div>
+      </div>
+      <div class="flex flex-row flex-wrap">
+        <div class="flex flex-col flex-wrap w-[640px]">
+          <div class="flex flex-wrap p-2 gap-4">
             <TextFieldOutlined
               id="TextFieldOutlined1"
               label="Full name"
@@ -323,8 +329,6 @@
               message="Required"
               error={textOutlined1 ? "" : "Required"}
             />
-          </div>
-          <div class="flex flex-wrap gap-4">
             <TextFieldOutlined
               id="TextFieldOutlined2"
               type="email"
@@ -333,7 +337,7 @@
               message="Optional"
             />
           </div>
-          <div class="flex flex-wrap gap-4">
+          <div class="flex flex-wrap p-2 gap-4">
             <TextFieldOutlined
               id="TextFieldOutlined1"
               label="Full name"
@@ -342,8 +346,6 @@
               error={textOutlined1 ? "" : "Required"}
               disabled
             />
-          </div>
-          <div class="flex flex-wrap gap-4">
             <TextFieldOutlined
               id="TextFieldOutlined2"
               type="email"
@@ -356,7 +358,6 @@
         </div>
         <div class="col-span-3 lg:col-span-1 flex gap-4"></div>
       </div>
-      <div class="col-span-3 lg:col-span-1 flex gap-4"></div>
     </main>
   </div>
 </div>
