@@ -1,28 +1,28 @@
 <script>
   import { writable } from "svelte/store";
   import Header from "./lib/Header.svelte";
-  import ButtonElevated from "./lib/ButtonElevated.svelte";
-  import ButtonFilled from "./lib/ButtonFilled.svelte";
-  import ButtonTonal from "./lib/ButtonTonal.svelte";
-  import ButtonOutlined from "./lib/ButtonOutlined.svelte";
-  import ButtonText from "./lib/ButtonText.svelte";
-  import IconButton from "./lib/IconButton.svelte";
-  import IconButtonFilled from "./lib/IconButtonFilled.svelte";
-  import IconButtonTonal from "./lib/IconButtonTonal.svelte";
-  import IconButtonOutlined from "./lib/IconButtonOutlined.svelte";
-  import GroupedButton from "./lib/GroupedButton.svelte";
-  import GroupedRadio from "./lib/GroupedRadio.svelte";
-  import GroupedCheckBox from "./lib/GroupedCheckBox.svelte";
-  import CheckBox from "./lib/CheckBox.svelte";
-  import Switch from "./lib/Switch.svelte";
-  import Filter from "./lib/Filter.svelte";
-  import TextFieldFilled from "./lib/TextFieldFilled.svelte";
-  import TextFieldOutlined from "./lib/TextFieldOutlined.svelte";
+  import ButtonElevated from "./lib/components/ButtonElevated.svelte";
+  import ButtonFilled from "./lib/components/ButtonFilled.svelte";
+  import ButtonTonal from "./lib/components/ButtonTonal.svelte";
+  import ButtonOutlined from "./lib/components/ButtonOutlined.svelte";
+  import ButtonText from "./lib/components/ButtonText.svelte";
+  import IconButton from "./lib/components/IconButton.svelte";
+  import IconButtonFilled from "./lib/components/IconButtonFilled.svelte";
+  import IconButtonTonal from "./lib/components/IconButtonTonal.svelte";
+  import IconButtonOutlined from "./lib/components/IconButtonOutlined.svelte";
+  import GroupedButton from "./lib/components/GroupedButton.svelte";
+  import GroupedRadio from "./lib/components/GroupedRadio.svelte";
+  import GroupedCheckBox from "./lib/components/GroupedCheckBox.svelte";
+  import CheckBox from "./lib/components/CheckBox.svelte";
+  import Switch from "./lib/components/Switch.svelte";
+  import Filter from "./lib/components/Filter.svelte";
+  import TextFieldFilled from "./lib/components/TextFieldFilled.svelte";
+  import TextFieldOutlined from "./lib/components/TextFieldOutlined.svelte";
 
-  import SvgClose from "./lib/SvgClose.svelte";
-  import SvgCancel from "./lib/SvgCancel.svelte";
-  import SvgRefresh from "./lib/SvgRefresh.svelte";
-  import SvgContentCopy from "./lib/SvgContentCopy.svelte";
+  import SvgClose from "./lib/icons/SvgClose.svelte";
+  import SvgCancel from "./lib/icons/SvgCancel.svelte";
+  import SvgRefresh from "./lib/icons/SvgRefresh.svelte";
+  import SvgContentCopy from "./lib/icons/SvgContentCopy.svelte";
 
   let whichButtonClicked = writable("");
 
