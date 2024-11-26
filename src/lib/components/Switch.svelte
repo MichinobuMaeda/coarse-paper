@@ -4,7 +4,7 @@
   /**
    * @typedef {Object} Props
    * @property {string} id
-   * @property {Object} checked
+   * @property {boolean} checked
    */
 
   /** @type {Props} */

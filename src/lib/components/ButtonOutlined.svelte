@@ -2,7 +2,7 @@
   /**
    * @typedef {Object} Props
    * @property {string} id
-   * @property {import("svelte").Component} [icon]
+   * @property {import("svelte").Component?} [icon]
    * @property {string} label
    * @property {function} onClick
    * @property {boolean} [disabled]

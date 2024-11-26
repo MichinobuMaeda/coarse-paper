@@ -5,7 +5,7 @@
    * @typedef {Object} Props
    * @property {string} id
    * @property {Array} items
-   * @property {Object} value
+   * @property {string} value
    */
 
   /** @type {Props} */
