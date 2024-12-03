@@ -42,7 +42,7 @@
 >
   <span class="flex flex-row gap-0.5">
     {#if checked}
-      <SvgCheck />
+      <span class="w-6 h-6"><SvgCheck /></span>
     {/if}
     {label}
   </span>
