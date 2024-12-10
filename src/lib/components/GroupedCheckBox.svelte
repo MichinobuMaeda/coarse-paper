@@ -3,7 +3,7 @@
    * @typedef {Object} Props
    * @property {string} id
    * @property {Array} items
-   * @property {string} value
+   * @property {Array} value
    */
 
   /** @type {Props} */

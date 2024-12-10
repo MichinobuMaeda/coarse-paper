@@ -73,16 +73,22 @@
   let textFilled2 = $state("user@example.com");
   let textOutlined1 = $state("");
   let textOutlined2 = $state("user@example.com");
+
+  let textMultiLines = $state(`Line 1
+Line 2
+
+Line 4
+`);
 </script>
 
 <div
   class="flex flex-row justify-center
-    bg-lightSurfaceVariant dark:bg-darkSurfaceVariant"
+    bg-lightBackground dark:bg-darkBackground"
 >
   <div
     class="min-h-screen w-full lg:w-[1048px]
-    bg-lightBackground dark:bg-darkBackground
-    text-lightOnBackground dark:text-darkOnBackground"
+    bg-lightForm dark:bg-darkForm
+    text-lightOnForm dark:text-darkOnForm"
   >
     <Header />
     <main class="flex flex-col m-[12px] mb-auto">
@@ -357,6 +363,28 @@
           </div>
         </div>
         <div class="col-span-3 lg:col-span-1 flex gap-4"></div>
+      </div>
+      <div class="flex flex-row flex-wrap">
+        <div class="flex flex-col flex-wrap w-[640px]">
+          <div class="flex flex-wrap p-2 gap-4">
+            <TextFieldFilled
+              id="TextFieldFilledMultiLine1"
+              label="Description"
+              bind:value={textMultiLines}
+              lines={5}
+              message="Required"
+              error={textMultiLines ? "" : "Required"}
+            />
+            <TextFieldOutlined
+              id="TextFieldOutlinedMultiLine1"
+              label="Description"
+              bind:value={textMultiLines}
+              lines={5}
+              message="Required"
+              error={textMultiLines ? "" : "Required"}
+            />
+          </div>
+        </div>
       </div>
     </main>
   </div>
