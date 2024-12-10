@@ -4,7 +4,7 @@ import { generateScheme, contrast } from "./material-theme.js";
 const lightLink = blue[700];
 const darkLink = blue[300];
 
-const materialTheme = generateScheme("#769CDF", contrast.low);
+const materialTheme = generateScheme("#4682B4", contrast.standard);
 
 /** @type {import('tailwindcss').Config} */
 export default {

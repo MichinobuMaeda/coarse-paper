@@ -4,9 +4,10 @@ import {
   Hct,
   hexFromArgb,
   TonalPalette,
+  sanitizeDegreesDouble,
 } from "@material/material-color-utilities";
 
-export const contrast = { low: 0.02, medium: 0.25, high: 1.0 };
+export const contrast = { standard: 0, medium: 0.3, high: 0.9 };
 
 /**
  * Generate a color scheme based on a seed color
@@ -15,9 +16,9 @@ export const contrast = { low: 0.02, medium: 0.25, high: 1.0 };
  * @returns {object}
  */
 export const generateScheme = (seedColor, contrast) => {
-  const hct = Hct.fromInt(argbFromHex(seedColor));
-  const hue = hct.hue;
-  const chroma = hct.chroma;
+  const sourceColorHct = Hct.fromInt(argbFromHex(seedColor));
+  // const hue = sourceColorHct.hue;
+  // const chroma = sourceColorHct.chroma;
 
   const scheme = {};
   const brightnessSet = [
@@ -26,16 +27,21 @@ export const generateScheme = (seedColor, contrast) => {
   ];
   brightnessSet.forEach((brightness) => {
     const ds = new DynamicScheme({
-      sourceColorHct: hct,
+      sourceColorHct,
       variant: "variant",
       contrastLevel: contrast,
       isDark: brightness.value,
-      primaryPalette: TonalPalette.fromHueAndChroma(hue, Math.max(48, chroma)),
-      secondaryPalette: TonalPalette.fromHueAndChroma(hue, 16),
-      tertiaryPalette: TonalPalette.fromHueAndChroma(hue + 60, 24),
-      neutralPalette: TonalPalette.fromHueAndChroma(hue, 4),
-      neutralVariantPalette: TonalPalette.fromHueAndChroma(hue, 8),
-      errorPalette: TonalPalette.fromHueAndChroma(25, 84),
+      primaryPalette: TonalPalette.fromHueAndChroma(sourceColorHct.hue, 36.0),
+      secondaryPalette: TonalPalette.fromHueAndChroma(sourceColorHct.hue, 16.0),
+      tertiaryPalette: TonalPalette.fromHueAndChroma(
+        sanitizeDegreesDouble(sourceColorHct.hue + 60.0),
+        24.0,
+      ),
+      neutralPalette: TonalPalette.fromHueAndChroma(sourceColorHct.hue, 6.0),
+      neutralVariantPalette: TonalPalette.fromHueAndChroma(
+        sourceColorHct.hue,
+        8.0,
+      ),
     });
     const capitalize = (s) => s.charAt(0).toUpperCase() + s.slice(1);
     [
