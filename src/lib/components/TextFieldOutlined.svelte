@@ -34,27 +34,30 @@
 
 <div
   class={"flex flex-col grow" +
-    (lines === 1 ? " h-14" : "") +
+    (lines === 1 ? " h-16" : "") +
     (disabled ? " opacity-40" : "")}
 >
   <label
     for={id}
-    class="mt-2 py-2 px-2 relative block rounded-md border
-      border-lightOutline dark:border-darkOutline
-      focus-within:border-lightOutline focus-within:dark:border-darkOutline
-      bg-lightForm dark:bg-darkForm
-      text-lightOnSurface dark:text-darkOnSurface"
+    class={"mt-2 py-2 px-2 relative block rounded-md border" +
+      " focus-within:border-2" +
+      " bg-lightForm dark:bg-darkForm" +
+      " text-lightOnSurface dark:text-darkOnSurface" +
+      (error
+        ? " border-lightError dark:border-darkError"
+        : " border-lightOutline dark:border-darkOutline" +
+          " focus-within:border-lightPrimary focus-within:dark:border-darkPrimary")}
   >
     {#if lines === 1}
       <input
         {id}
         {type}
         bind:value
-        class={"peer border-none w-full text-base " +
-          "focus:border-none focus:outline-none focus:ring-0 " +
-          "placeholder-lightSurface dark:placeholder-darkSurface " +
-          "bg-lightForm dark:bg-darkForm " +
-          "text-lightOnSurface dark:text-darkOnSurface" +
+        class={"peer border-none w-full text-base" +
+          " focus:border-none focus:outline-none focus:ring-0" +
+          " placeholder-transparent dark:placeholder-transparent" +
+          " bg-lightForm dark:bg-darkForm" +
+          " text-lightOnSurface dark:text-darkOnSurface" +
           (monospace ? " font-mono" : "")}
         placeholder={label}
         {readonly}
@@ -64,11 +67,11 @@
       <textarea
         {id}
         bind:value
-        class={"peer border-none w-full text-base " +
-          "focus:border-none focus:outline-none focus:ring-0 " +
-          "placeholder-lightSurface dark:placeholder-darkSurface " +
-          "bg-lightForm dark:bg-darkForm " +
-          "text-lightOnSurface dark:text-darkOnSurface" +
+        class={"peer border-none w-full text-base" +
+          " focus:border-none focus:outline-none focus:ring-0" +
+          " placeholder-transparent dark:placeholder-transparent" +
+          " bg-lightForm dark:bg-darkForm" +
+          " text-lightOnSurface dark:text-darkOnSurface" +
           (monospace ? " font-mono" : "")}
         placeholder={label}
         rows={lines}
@@ -78,11 +81,14 @@
       >
     {/if}
     <span
-      class="peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm
-        peer-focus:top-0 peer-focus:text-xs pointer-events-none
-        absolute start-2 top-0 -translate-y-1/2 p-0.5 text-xs transition-all
-        bg-lightForm dark:bg-darkForm
-        text-lightOnSurface dark:text-darkOnSurface"
+      class={"peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm" +
+        " peer-focus:top-0 peer-focus:text-xs pointer-events-none" +
+        " absolute start-2 top-0 -translate-y-1/2 p-0.5 text-xs transition-all" +
+        " bg-lightForm dark:bg-darkForm" +
+        (error
+          ? " text-lightError dark:text-darkError"
+          : " text-lightOnSurfaceVariant dark:text-darkOnSurfaceVariant" +
+            " peer-focus:text-lightPrimary dark:peer-focus:text-darkPrimary")}
     >
       {label}
     </span>
