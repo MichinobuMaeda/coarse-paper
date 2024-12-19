@@ -18,6 +18,8 @@
   import Filter from "./lib/components/Filter.svelte";
   import TextFieldFilled from "./lib/components/TextFieldFilled.svelte";
   import TextFieldOutlined from "./lib/components/TextFieldOutlined.svelte";
+  import PasswordFieldFilled from "./lib/components/PasswordFieldFilled.svelte";
+  import PasswordFieldOutlined from "./lib/components/PasswordFieldOutlined.svelte";
 
   import SvgClose from "./lib/icons/SvgClose.svelte";
   import SvgCancel from "./lib/icons/SvgCancel.svelte";
@@ -79,6 +81,8 @@ Line 2
 
 Line 4
 `);
+
+  let password = $state("");
 </script>
 
 <div
@@ -91,7 +95,7 @@ Line 4
     text-lightOnForm dark:text-darkOnForm"
   >
     <Header />
-    <main class="flex flex-col m-[12px] mb-auto">
+    <main class="flex flex-col m-[12px] mb-auto pb-8">
       <div class="flex flex-row flex-wrap">
         <div class="flex flex-col w-[640px]">
           <div class="flex flex-wrap p-2 gap-4">
@@ -382,6 +386,26 @@ Line 4
               lines={5}
               message="Required"
               error={textMultiLines ? "" : "Required"}
+            />
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-row flex-wrap">
+        <div class="flex flex-col flex-wrap w-[640px]">
+          <div class="flex flex-wrap p-2 gap-4">
+            <PasswordFieldFilled
+              id="PasswordFieldOutlined1"
+              label="Password"
+              bind:value={password}
+              message="Required"
+              error={password ? "" : "Required"}
+            />
+            <PasswordFieldOutlined
+              id="PasswordFieldOutlined2"
+              label="Password"
+              bind:value={password}
+              message="Required"
+              error={password ? "" : "Required"}
             />
           </div>
         </div>

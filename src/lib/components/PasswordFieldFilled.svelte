@@ -1,39 +1,30 @@
 <script>
-  import SvgErrorFill from "../icons/SvgErrorFill.svelte";
+  import SvgVisibilityOff from "../../lib/icons/SvgVisibilityOff.svelte";
+  import SvgVisibilityOn from "../../lib/icons/SvgVisibilityOn.svelte";
 
   /**
    * @typedef {Object} Props
    * @property {string} id
-   * @property {string} [type]
    * @property {Object} value
    * @property {string} label
    * @property {string} [message]
    * @property {string} [error]
    * @property {boolean} [readonly]
    * @property {boolean} [disabled]
-   * @property {boolean} [monospace]
-   * @property {number} [lines]
    */
 
   /** @type {Props} */
   let {
     id,
-    type = "text",
     value = $bindable(),
     label,
     message = "",
     error = "",
     readonly = false,
     disabled = false,
-    monospace = undefined,
-    lines = 1,
   } = $props();
 
-  monospace ??= ["password", "email", "number"].includes(type);
-
-  const onChange = (event) => {
-    value = event.target.value;
-  };
+  let visible = $state(false);
 </script>
 
 <div class={"flex flex-col grow" + (disabled ? " opacity-40" : "")}>
@@ -43,21 +34,21 @@
       " bg-lightSurfaceContainerHighest dark:bg-darkSurfaceContainerHighest" +
       " text-lightOnSurface dark:text-darkOnSurface" +
       (error
-        ? " border-lightError dark:border-darkError" +
-          " text-lightError dark:text-darkError"
+        ? " border-lightError dark:border-darkError"
         : " border-lightOutline dark:border-darkOutline" +
           " focus-within:border-lightPrimary focus-within:dark:border-darkPrimary")}
   >
-    {#if lines === 1}
+    <div class="flex flex-row">
       <input
         {id}
-        {type}
+        type={visible ? "text" : "password"}
         bind:value
         class={"peer border-none w-full text-base" +
           " focus:border-none focus:outline-none focus:ring-0" +
           " placeholder-transparent dark:placeholder-transparent" +
           " bg-lightSurfaceContainerHighest dark:bg-darkSurfaceContainerHighest" +
-          (monospace ? " font-mono" : "")}
+          " text-lightOnSurface dark:text-darkOnSurface" +
+          " font-mono"}
         placeholder={label}
         {readonly}
         {disabled}
@@ -73,41 +64,29 @@
       >
         {label}
       </span>
-    {:else}
-      <textarea
-        {id}
-        bind:value
-        class={"peer border-none w-full text-base " +
-          " focus:border-none focus:outline-none focus:ring-0" +
-          " placeholder-transparent dark:placeholder-transparent" +
-          " bg-lightSurfaceContainerHighest dark:bg-darkSurfaceContainerHighest" +
-          (monospace ? " font-mono" : "")}
-        placeholder={label}
-        rows={lines}
-        {readonly}
-        {disabled}
-        onchange={onChange}>{value}</textarea
+      <button
+        id={`${id}-visible`}
+        type="button"
+        class={"text-base" +
+          (disabled
+            ? " text-lightOutline dark:text-darkOutline" + " opacity-50"
+            : error
+              ? " text-lightError dark:text-darkError"
+              : " text-lightOutline dark:text-darkOutline" +
+                " peer-focus:text-lightPrimary dark:peer-focus:text-darkPrimary")}
+        onclick={() => {
+          visible = !visible;
+        }}
       >
-      <span
-        class={"peer-placeholder-shown:top-6 peer-placeholder-shown:text-sm" +
-          " peer-focus:top-2 peer-focus:text-xs pointer-events-none" +
-          " absolute start-2 top-2 -translate-y-1/2 p-0.5 text-xs transition-all" +
-          (error
-            ? " text-lightError dark:text-darkError"
-            : " text-lightOnSurfaceVariant dark:text-darkOnSurfaceVariant" +
-              " peer-focus:text-lightPrimary dark:peer-focus:text-darkPrimary")}
-      >
-        {label}
-      </span>
-    {/if}
-    {#if error}
-      <span
-        class="absolute end-2 top-3 w-6 h-6
-          text-lightError dark:text-darkError"
-      >
-        <SvgErrorFill />
-      </span>
-    {/if}
+        <span class="absolute end-2 top-3 w-6 h-6">
+          {#if visible}
+            <SvgVisibilityOn />
+          {:else}
+            <SvgVisibilityOff />
+          {/if}
+        </span>
+      </button>
+    </div>
   </label>
   {#if !error}
     <div
