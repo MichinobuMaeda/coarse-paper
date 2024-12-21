@@ -6,19 +6,29 @@
    * @property {string} label
    * @property {function} onClick
    * @property {boolean} [disabled]
+   * @property {boolean} [danger]
    */
 
   /** @type {Props} */
-  let { id, icon = null, label, onClick, disabled = false } = $props();
+  let {
+    id,
+    icon = null,
+    label,
+    onClick,
+    disabled = false,
+    danger = false,
+  } = $props();
 </script>
 
 <button
   {id}
   type="button"
-  class={"px-1 text-base " +
+  class={"px-1 text-base" +
     (disabled
-      ? "opacity-50 " + "text-lightOnSurface dark:text-darkOnSurface"
-      : "text-lightPrimary dark:text-darkPrimary")}
+      ? " text-lightOnSurface dark:text-darkOnSurface" + " opacity-50"
+      : danger
+        ? " text-lightError dark:text-darkError"
+        : " text-lightPrimary dark:text-darkPrimary")}
   onclick={disabled ? () => {} : () => onClick()}
 >
   <span class="flex flex-row gap-0.5">

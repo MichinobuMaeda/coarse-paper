@@ -161,6 +161,67 @@ Line 4
               disabled
             />
           </div>
+          <div class="flex flex-wrap p-2 gap-4">
+            <ButtonElevated
+              id="ButtonElevated"
+              label="Elevated"
+              onClick={onClickButtonElevated}
+              danger
+            />
+            <ButtonFilled
+              id="ButtonFilled"
+              label="Filled"
+              onClick={onClickButtonFilled}
+              danger
+            />
+            <ButtonTonal
+              id="ButtonTonal"
+              label="Tonal"
+              onClick={onClickButtonTonal}
+              danger
+            />
+            <ButtonOutlined
+              id="ButtonOutlined"
+              icon={SvgContentCopy}
+              label="Outlined"
+              onClick={onClickButtonOutlined}
+              danger
+            />
+            <ButtonText
+              id="ButtonText"
+              icon={SvgContentCopy}
+              label="Text"
+              onClick={onClickButtonText}
+              danger
+            />
+          </div>
+          <div class="flex flex-wrap p-2 gap-4">
+            <ButtonElevated
+              id="ButtonElevated"
+              label="Elevated"
+              onClick={onClickButtonElevated}
+              dense
+            />
+            <ButtonFilled
+              id="ButtonFilled"
+              label="Filled"
+              onClick={onClickButtonFilled}
+              dense
+            />
+            <ButtonTonal
+              id="ButtonTonal"
+              label="Tonal"
+              onClick={onClickButtonTonal}
+              dense
+            />
+            <ButtonOutlined
+              id="ButtonOutlined"
+              icon={SvgContentCopy}
+              label="Outlined"
+              onClick={onClickButtonOutlined}
+              dense
+            />
+          </div>
         </div>
         <div class="flex flex-wrap p-2 gap-4 w-[320px]">
           [ Clicked: {$whichButtonClicked} ]
@@ -169,11 +230,6 @@ Line 4
       <div class="flex flex-row flex-wrap">
         <div class="flex flex-wrap w-[640px]">
           <div class="flex flex-wrap p-2 gap-4">
-            <IconButton
-              id="IconButton"
-              icon={SvgClose}
-              onClick={onClickIconButton}
-            />
             <IconButtonFilled
               id="IconButtonFilled"
               icon={SvgCancel}
@@ -188,15 +244,14 @@ Line 4
               id="IconButtonOutlined"
               icon={SvgContentCopy}
               onClick={onClickIconButtonOutlined}
+            />
+            <IconButton
+              id="IconButton"
+              icon={SvgClose}
+              onClick={onClickIconButton}
             />
           </div>
           <div class="flex flex-wrap p-2 gap-4">
-            <IconButton
-              id="IconButton"
-              icon={SvgClose}
-              onClick={onClickIconButton}
-              disabled
-            />
             <IconButtonFilled
               id="IconButtonFilled"
               icon={SvgCancel}
@@ -214,6 +269,58 @@ Line 4
               icon={SvgContentCopy}
               onClick={onClickIconButtonOutlined}
               disabled
+            />
+            <IconButton
+              id="IconButton"
+              icon={SvgClose}
+              onClick={onClickIconButton}
+              disabled
+            />
+          </div>
+          <div class="flex flex-wrap p-2 gap-4">
+            <IconButtonFilled
+              id="IconButtonFilled"
+              icon={SvgCancel}
+              onClick={onClickIconButtonFilled}
+              danger
+            />
+            <IconButtonTonal
+              id="IconButtonTonal"
+              icon={SvgRefresh}
+              onClick={onClickIconButtonTonal}
+              danger
+            />
+            <IconButtonOutlined
+              id="IconButtonOutlined"
+              icon={SvgContentCopy}
+              onClick={onClickIconButtonOutlined}
+              danger
+            />
+            <IconButton
+              id="IconButton"
+              icon={SvgClose}
+              onClick={onClickIconButton}
+              danger
+            />
+          </div>
+          <div class="flex flex-wrap p-2 gap-4">
+            <IconButtonFilled
+              id="IconButtonFilled"
+              icon={SvgCancel}
+              onClick={onClickIconButtonFilled}
+              dense
+            />
+            <IconButtonTonal
+              id="IconButtonTonal"
+              icon={SvgRefresh}
+              onClick={onClickIconButtonTonal}
+              dense
+            />
+            <IconButtonOutlined
+              id="IconButtonOutlined"
+              icon={SvgContentCopy}
+              onClick={onClickIconButtonOutlined}
+              dense
             />
           </div>
         </div>
