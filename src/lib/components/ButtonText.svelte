@@ -25,7 +25,7 @@
   type="button"
   class={"px-1 text-base" +
     (disabled
-      ? " text-lightOnSurface dark:text-darkOnSurface" + " opacity-50"
+      ? " text-lightOnSurface dark:text-darkOnSurface" + " opacity-30"
       : danger
         ? " text-lightError dark:text-darkError"
         : " text-lightPrimary dark:text-darkPrimary")}
