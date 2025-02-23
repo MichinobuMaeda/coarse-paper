@@ -20,6 +20,8 @@
     danger = false,
     dense = false,
   } = $props();
+
+  const SvgIcon = $derived(icon);
 </script>
 
 <button
@@ -29,20 +31,18 @@
     ? "px-4 py-0.5 border-none rounded-full h-8 text-base"
     : "px-5 py-1.5 border-none rounded-full h-10 text-base") +
     (disabled
-      ? " bg-lightSurfaceDim dark:bg-darkSurfaceDim " +
-        " text-lightOnSurface dark:text-darkOnSurface" +
-        " opacity-50 "
-      : " bg-lightSurfaceContainerHigh dark:bg-darkSurfaceContainer " +
-        (danger
-          ? " text-lightError dark:text-darkError"
-          : " text-lightPrimary dark:text-darkPrimary") +
-        " shadow-sm " +
-        " shadow-lightShadow dark:shadow-darkShadow")}
+      ? " opacity-50" +
+        " bg-lightSurfaceDim dark:bg-darkSurfaceDim " +
+        " text-lightOnSurface dark:text-darkOnSurface"
+      : danger
+        ? " bg-lightErrorContainer dark:bg-darkErrorContainer " +
+          " text-lightOnErrorContainer dark:text-darkOnErrorContainer"
+        : " bg-lightPrimaryContainer dark:bg-darkPrimaryContainer " +
+          " text-lightOnPrimaryContainer dark:text-darkOnPrimaryContainer")}
   onclick={disabled ? () => {} : () => onClick()}
 >
   <span class="flex flex-row gap-0.5">
     {#if icon !== null}
-      {@const SvgIcon = icon}
       <span class="w-6 h-6"><SvgIcon /></span>
     {/if}
     {label}

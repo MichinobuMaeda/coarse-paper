@@ -20,6 +20,8 @@
     danger = false,
     dense = false,
   } = $props();
+
+  const SvgIcon = $derived(icon);
 </script>
 
 <button
@@ -41,7 +43,6 @@
 >
   <span class="flex flex-row gap-0.5">
     {#if icon !== null}
-      {@const SvgIcon = icon}
       <span class="w-6 h-6"><SvgIcon /></span>
     {/if}
     {label}
