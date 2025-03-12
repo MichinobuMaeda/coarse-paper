@@ -13,7 +13,7 @@
 </script>
 
 <div {id} role="group" class="inline-flex rounded-md shadow-sm h-10 text-base">
-  {#each items as item, index}
+  {#each items as item, index (item.id)}
     <button
       type="button"
       onclick={() => {
@@ -24,14 +24,14 @@
         : index == items.length - 1
           ? "pr-4 py-1.5 border rounded-r-full "
           : "pr-4 py-1.5 border-t border-b border-l ") +
-        "border-lightOutline dark:border-darkOutline" +
+        "border-light-outline dark:border-dark-outline" +
         (value === item.value
           ? " pl-2 " +
-            "bg-lightSecondaryContainer dark:bg-darkSecondaryContainer " +
-            "text-lightOnSecondaryContainer dark:text-darkOnSecondaryContainer"
+            "bg-light-secondary-container dark:bg-dark-secondary-container " +
+            "text-light-on-secondary-container dark:text-dark-on-secondary-container"
           : " pl-4 " +
-            "bg-lightSurface dark:bg-darkSurface " +
-            "text-lightOnSurface dark:text-darkOnSurface")}
+            "bg-light-surface dark:bg-dark-surface " +
+            "text-light-on-surface dark:text-dark-on-surface")}
     >
       <span class="flex flex-row gap-0.5">
         {#if value === item.value}

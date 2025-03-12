@@ -29,13 +29,13 @@
     (dense ? " size-8" : " size-10") +
     (disabled
       ? " opacity-50 " +
-        " bg-lightSurfaceDim dark:bg-darkSurfaceDim" +
-        " text-lightOnSurface dark:text-darkOnSurface"
+        " bg-light-surface-dim dark:bg-dark-surface-dim" +
+        " text-light-on-surface dark:text-dark-on-surface"
       : danger
-        ? " bg-lightError dark:bg-darkError" +
-          " text-lightOnError dark:text-darkOnError"
-        : " bg-lightPrimary dark:bg-darkPrimary" +
-          " text-lightOnPrimary dark:text-darkOnPrimary")}
+        ? " bg-light-error dark:bg-dark-error" +
+          " text-light-on-error dark:text-dark-on-error"
+        : " bg-light-primary dark:bg-dark-primary" +
+          " text-light-on-primary dark:text-dark-on-primary")}
   onclick={disabled ? () => {} : () => onClick()}
 >
   <span class="flex size-6"><SvgIcon /></span>

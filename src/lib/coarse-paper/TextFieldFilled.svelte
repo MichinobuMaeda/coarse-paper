@@ -40,13 +40,13 @@
   <label
     for={id}
     class={"pt-4 pb-2 px-2 relative block rounded-t-md border-b" +
-      " bg-lightSurfaceContainerHighest dark:bg-darkSurfaceContainerHighest" +
-      " text-lightOnSurface dark:text-darkOnSurface" +
+      " bg-light-surface-container-highest dark:bg-dark-surface-container-highest" +
+      " text-light-on-surface dark:text-dark-on-surface" +
       (error
-        ? " border-lightError dark:border-darkError" +
-          " text-lightError dark:text-darkError"
-        : " border-lightOutline dark:border-darkOutline" +
-          " focus-within:border-lightPrimary focus-within:dark:border-darkPrimary")}
+        ? " border-light-error dark:border-dark-error" +
+          " text-light-error dark:text-dark-error"
+        : " border-light-outline dark:border-dark-outline" +
+          " focus-within:border-light-primary focus-within:dark:border-dark-primary")}
   >
     {#if lines === 1}
       <input
@@ -56,7 +56,7 @@
         class={"peer border-none w-full text-base" +
           " focus:border-none focus:outline-none focus:ring-0" +
           " placeholder-transparent dark:placeholder-transparent" +
-          " bg-lightSurfaceContainerHighest dark:bg-darkSurfaceContainerHighest" +
+          " bg-light-surface-container-highest dark:bg-dark-surface-container-highest" +
           (monospace ? " font-mono" : "")}
         placeholder={label}
         {readonly}
@@ -67,9 +67,9 @@
           " peer-focus:top-2 peer-focus:text-xs pointer-events-none" +
           " absolute start-2 top-2 -translate-y-1/2 p-0.5 text-xs transition-all" +
           (error
-            ? " text-lightError dark:text-darkError"
-            : " text-lightOnSurfaceVariant dark:text-darkOnSurfaceVariant" +
-              " peer-focus:text-lightPrimary dark:peer-focus:text-darkPrimary")}
+            ? " text-light-error dark:text-dark-error"
+            : " text-light-on-surface-variant dark:text-dark-on-surface-variant" +
+              " peer-focus:text-light-primary dark:peer-focus:text-dark-primary")}
       >
         {label}
       </span>
@@ -80,7 +80,7 @@
         class={"peer border-none w-full text-base " +
           " focus:border-none focus:outline-none focus:ring-0" +
           " placeholder-transparent dark:placeholder-transparent" +
-          " bg-lightSurfaceContainerHighest dark:bg-darkSurfaceContainerHighest" +
+          " bg-light-surface-container-highest dark:bg-dark-surface-container-highest" +
           (monospace ? " font-mono" : "")}
         placeholder={label}
         rows={lines}
@@ -93,9 +93,9 @@
           " peer-focus:top-2 peer-focus:text-xs pointer-events-none" +
           " absolute start-2 top-2 -translate-y-1/2 p-0.5 text-xs transition-all" +
           (error
-            ? " text-lightError dark:text-darkError"
-            : " text-lightOnSurfaceVariant dark:text-darkOnSurfaceVariant" +
-              " peer-focus:text-lightPrimary dark:peer-focus:text-darkPrimary")}
+            ? " text-light-error dark:text-dark-error"
+            : " text-light-on-surface-variant dark:text-dark-on-surface-variant" +
+              " peer-focus:text-light-primary dark:peer-focus:text-dark-primary")}
       >
         {label}
       </span>
@@ -104,7 +104,7 @@
       <span
         class={"absolute top-2 size-6" +
           (type === "number" ? " end-8" : " end-2") +
-          " text-lightError dark:text-darkError"}
+          " text-light-error dark:text-dark-error"}
       >
         <SvgErrorFill />
       </span>
@@ -113,14 +113,14 @@
   {#if !error}
     <div
       class="text-sm pl-2
-        text-lightOnSurface dark:text-darkOnSurface"
+        text-light-on-surface dark:text-dark-on-surface"
     >
       {message}
     </div>
   {:else}
     <div
       class="text-sm pl-2
-      text-lightError dark:text-darkError"
+      text-light-error dark:text-dark-error"
     >
       {error}
     </div>

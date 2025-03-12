@@ -31,7 +31,7 @@
   const onClickButtonElevated = () => whichButtonClicked.set("Elevated");
   const onClickButtonFilled = () => whichButtonClicked.set("Filled");
   const onClickButtonTonal = () => whichButtonClicked.set("Tonal");
-  const onClickButtonOutlined = () => whichButtonClicked.set("Outlined");
+  const onClickButtonOutlined = () => whichButtonClicked.set("-outlined");
   const onClickButtonText = () => whichButtonClicked.set("Text");
 
   let whichIconButtonClicked = writable("");
@@ -40,22 +40,13 @@
   const onClickIconButtonFilled = () => whichIconButtonClicked.set("Filled");
   const onClickIconButtonTonal = () => whichIconButtonClicked.set("Tonal");
   const onClickIconButtonOutlined = () =>
-    whichIconButtonClicked.set("Outlined");
+    whichIconButtonClicked.set("-outlined");
 
   let groupSelected = $state("1");
   const groupItems = [
-    {
-      label: "item 1",
-      value: "1",
-    },
-    {
-      label: "item 2",
-      value: "2",
-    },
-    {
-      label: "item 3",
-      value: "3",
-    },
+    { label: "item 1", value: "1" },
+    { label: "item 2", value: "2" },
+    { label: "item 3", value: "3" },
   ];
 
   let groupMultiSelected = $state(["2"]);
@@ -87,12 +78,12 @@ Line 4
 
 <div
   class="flex flex-row justify-center
-    bg-lightBackground dark:bg-darkBackground"
+    bg-light-background dark:bg-dark-background"
 >
   <div
     class="min-h-screen w-full lg:w-[1048px]
-    bg-lightForm dark:bg-darkForm
-    text-lightOnForm dark:text-darkOnForm"
+    bg-light-form dark:bg-dark-form
+    text-light-on-form dark:text-dark-on-form"
   >
     <Header />
     <main class="flex flex-col m-[12px] mb-auto pb-8">

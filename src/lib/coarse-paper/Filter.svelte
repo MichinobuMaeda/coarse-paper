@@ -20,20 +20,20 @@
     (disabled
       ? checked
         ? "opacity-50 pl-1 border-none " +
-          "bg-lightSurfaceDim dark:bg-darkSurfaceDim " +
-          "text-lightOnSurface dark:text-darkOnSurface"
+          "bg-light-surface-dim dark:bg-dark-surface-dim " +
+          "text-light-on-surface dark:text-dark-on-surface"
         : "opacity-50 pl-4 border " +
-          "bg-lightSurface dark:bg-darkSurface " +
-          "text-lightOnSurface dark:text-darkOnSurface " +
-          "border-lightOutlineVariant dark:border-darkOutlineVariant"
+          "bg-light-surface dark:bg-dark-surface " +
+          "text-light-on-surface dark:text-dark-on-surface " +
+          "border-light-outline-variant dark:border-dark-outline-variant"
       : checked
         ? "pl-1 border-none " +
-          "bg-lightPrimaryContainer dark:bg-darkPrimaryContainer " +
-          "text-lightOnPrimaryContainer dark:text-darkOnPrimaryContainer"
+          "bg-light-primary-container dark:bg-dark-primary-container " +
+          "text-light-on-primary-container dark:text-dark-on-primary-container"
         : "pl-4 border " +
-          "bg-lightSurface dark:bg-darkSurface " +
-          "text-lightOnSurface dark:text-darkOnSurface " +
-          "border-lightOutlineVariant dark:border-darkOutlineVariant")}
+          "bg-light-surface dark:bg-dark-surface " +
+          "text-light-on-surface dark:text-dark-on-surface " +
+          "border-light-outline-variant dark:border-dark-outline-variant")}
   onclick={disabled
     ? () => {}
     : () => {

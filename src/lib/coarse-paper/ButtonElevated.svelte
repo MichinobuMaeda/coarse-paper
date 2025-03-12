@@ -31,15 +31,15 @@
     ? "px-4 py-0.5 border-none rounded-full h-8 text-base"
     : "px-5 py-1.5 border-none rounded-full h-10 text-base") +
     (disabled
-      ? " bg-lightSurfaceDim dark:bg-darkSurfaceDim " +
-        " text-lightOnSurface dark:text-darkOnSurface" +
+      ? " bg-light-surface-dim dark:bg-dark-surface-dim " +
+        " text-light-on-surface dark:text-dark-on-surface" +
         " opacity-50 "
-      : " bg-lightSurfaceContainerHigh dark:bg-darkSurfaceContainer " +
+      : " bg-light-surface-container-high dark:bg-dark-surface-container " +
         (danger
-          ? " text-lightError dark:text-darkError"
-          : " text-lightPrimary dark:text-darkPrimary") +
+          ? " text-light-error dark:text-dark-error"
+          : " text-light-primary dark:text-dark-primary") +
         " shadow-sm " +
-        " shadow-lightShadow dark:shadow-darkShadow")}
+        " shadow-light-shadow dark:shadow-dark-shadow")}
   onclick={disabled ? () => {} : () => onClick()}
 >
   <span class="flex flex-row gap-0.5">
