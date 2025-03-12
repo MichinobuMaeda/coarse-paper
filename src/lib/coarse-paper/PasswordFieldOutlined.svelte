@@ -38,14 +38,14 @@
         (error
           ? " border-light-error dark:border-dark-error"
           : " border-light-outline dark:border-dark-outline" +
-            " focus-within:border-light-primary focus-within:dark:border-dark-primary")}
+            " focus-within:border-light-primary dark:focus-within:border-dark-primary")}
     >
       <input
         {id}
         type={visible ? "text" : "password"}
         bind:value
         class={"peer border-none w-full text-base" +
-          " focus:border-none focus:outline-none focus:ring-0" +
+          " focus:border-none focus:outline-hidden focus:ring-0" +
           " placeholder-transparent dark:placeholder-transparent" +
           " bg-light-form dark:bg-dark-form" +
           " text-light-on-surface dark:text-dark-on-surface" +

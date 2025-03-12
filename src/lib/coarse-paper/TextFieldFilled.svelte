@@ -46,7 +46,7 @@
         ? " border-light-error dark:border-dark-error" +
           " text-light-error dark:text-dark-error"
         : " border-light-outline dark:border-dark-outline" +
-          " focus-within:border-light-primary focus-within:dark:border-dark-primary")}
+          " focus-within:border-light-primary dark:focus-within:border-dark-primary")}
   >
     {#if lines === 1}
       <input
@@ -54,7 +54,7 @@
         {type}
         bind:value
         class={"peer border-none w-full text-base" +
-          " focus:border-none focus:outline-none focus:ring-0" +
+          " focus:border-none focus:outline-hidden focus:ring-0" +
           " placeholder-transparent dark:placeholder-transparent" +
           " bg-light-surface-container-highest dark:bg-dark-surface-container-highest" +
           (monospace ? " font-mono" : "")}
