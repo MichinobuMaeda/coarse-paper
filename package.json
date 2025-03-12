@@ -1,11 +1,13 @@
 {
   "name": "coarse-paper",
   "private": true,
-  "version": "1.1.2",
+  "version": "1.1.3",
   "type": "module",
   "scripts": {
     "start": "vite --port 8000",
-    "build": "vite build"
+    "theme": "node ./material-theme.js",
+    "build": "npm run theme && vite build",
+    "lint": "npx eslint"
   },
   "devDependencies": {
     "@material/material-color-utilities": "^0.3.0",
