@@ -28,18 +28,18 @@
 </script>
 
 <div class="flex flex-col grow h-[68px]">
-  <label
-    for={id}
-    class={"mt-2 py-2 px-2 relative block rounded-md border" +
-      " focus-within:border-2" +
-      " bg-light-form dark:bg-dark-form" +
-      " text-light-on-surface dark:text-dark-on-surface" +
-      (error
-        ? " border-light-error dark:border-dark-error"
-        : " border-light-outline dark:border-dark-outline" +
-          " focus-within:border-light-primary focus-within:dark:border-dark-primary")}
-  >
-    <div class="flex flex-row">
+  <div class="flex flex-row items-center">
+    <label
+      for={id}
+      class={"mt-2 py-2 px-2 grow relative block rounded-md border" +
+        " focus-within:border-2" +
+        " bg-light-form dark:bg-dark-form" +
+        " text-light-on-surface dark:text-dark-on-surface" +
+        (error
+          ? " border-light-error dark:border-dark-error"
+          : " border-light-outline dark:border-dark-outline" +
+            " focus-within:border-light-primary focus-within:dark:border-dark-primary")}
+    >
       <input
         {id}
         type={visible ? "text" : "password"}
@@ -66,30 +66,27 @@
       >
         {label}
       </span>
-      <button
-        id={`${id}-visible`}
-        type="button"
-        class={"text-base" +
-          (disabled
-            ? " text-light-outline dark:text-dark-outline" + " opacity-50"
-            : error
-              ? " text-light-error dark:text-dark-error"
-              : " text-light-outline dark:text-dark-outline" +
-                " peer-focus:text-light-primary dark:peer-focus:text-dark-primary")}
-        onclick={() => {
-          visible = !visible;
-        }}
-      >
-        <span class="absolute end-2 top-2 w-6 h-6">
-          {#if visible}
-            <SvgVisibilityOn />
-          {:else}
-            <SvgVisibilityOff />
-          {/if}
-        </span>
-      </button>
-    </div>
-  </label>
+    </label>
+    <button
+      id={`${id}-visible`}
+      type="button"
+      class={"text-base w-6 h-6 mx-2 pt-1" +
+        (disabled
+          ? " text-light-outline dark:text-dark-outline" + " opacity-50"
+          : error
+            ? " text-light-error dark:text-dark-error"
+            : " text-light-outline dark:text-dark-outline")}
+      onclick={() => {
+        visible = !visible;
+      }}
+    >
+      {#if visible}
+        <SvgVisibilityOn />
+      {:else}
+        <SvgVisibilityOff />
+      {/if}
+    </button>
+  </div>
   {#if !error}
     <div
       class="text-sm pl-2 line-clamp-1 text-ellipsis
