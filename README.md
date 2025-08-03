@@ -4,18 +4,18 @@ Some Material Design 3-like components for Svelte
 
 Inspired by
 
--   [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/)
--   [Material Symbols and Icons](https://fonts.google.com/icons)
--   [Svelte](https://svelte.dev/)
--   [Tailwind](https://tailwindcss.com/)
--   [HyperUI](https://www.hyperui.dev/)
--   [Mamba UI](https://mambaui.com/)
+- [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/)
+- [Material Symbols and Icons](https://fonts.google.com/icons)
+- [Svelte](https://svelte.dev/)
+- [Tailwind](https://tailwindcss.com/)
+- [HyperUI](https://www.hyperui.dev/)
+- [Mamba UI](https://mambaui.com/)
 
 ![samples](coarse-paper-sample.png)
 
 ## Prerequisites
 
--   node >= 20
+- node >= 22
 
 ## Build
 

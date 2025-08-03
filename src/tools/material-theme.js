@@ -7,7 +7,6 @@ import {
   TonalPalette,
   sanitizeDegreesDouble,
 } from "@material/material-color-utilities";
-import materialThemeConfig from "./material-theme.config.js";
 
 /**
  * Generate a color scheme based on a seed color
@@ -15,7 +14,13 @@ import materialThemeConfig from "./material-theme.config.js";
  * @param {object} config
  * @returns {Promise<void>}
  */
-const generateScheme = async ({ out, seedColor, link, form, contrast }) => {
+export const generateScheme = async ({
+  out,
+  seedColor,
+  link,
+  form,
+  contrast,
+}) => {
   let css = "@theme {\n";
 
   const sourceColorHct = Hct.fromInt(argbFromHex(seedColor));
@@ -109,9 +114,8 @@ const generateScheme = async ({ out, seedColor, link, form, contrast }) => {
 
   try {
     await fs.writeFile(out, css);
+    console.log(`Material theme generated at ${out}`);
   } catch (err) {
     console.error(err);
   }
 };
-
-await generateScheme(materialThemeConfig);

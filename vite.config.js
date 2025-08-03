@@ -1,10 +1,13 @@
 import { VitePWA } from "vite-plugin-pwa";
 import { defineConfig } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
+import { generateScheme } from "./src/tools/material-theme.js";
+import materialThemeConfig from "./material-theme.config.js";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    generateScheme(materialThemeConfig),
     svelte(),
     VitePWA({
       registerType: "prompt",

@@ -1,5 +1,12 @@
 {
-  "cSpell.words": ["argb", "Honkipass", "Maeda", "Michinobu", "tailwindcss"],
+  "cSpell.words": [
+    "argb",
+    "Honkipass",
+    "Maeda",
+    "Michinobu",
+    "paraglide",
+    "tailwindcss"
+  ],
   "eslint.validate": ["javascript", "javascriptreact", "svelte"],
   "eslint.useFlatConfig": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",

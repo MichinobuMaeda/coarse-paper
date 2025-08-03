@@ -6,7 +6,7 @@
   "scripts": {
     "start": "vite --port 8000",
     "theme": "node ./material-theme.js",
-    "build": "npm run theme && vite build",
+    "build": "vite build",
     "lint": "npx eslint"
   },
   "devDependencies": {
